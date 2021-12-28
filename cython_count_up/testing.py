@@ -1,6 +1,6 @@
 import timeit
 
-cy = timeit.timeit('example_cy.test(500000)', setup='import example_cy', number=1000)
+cy = timeit.timeit('example_cy.test(500000)', setup='from cython_project.cython_count_up import example_cy', number=1000)
 py = timeit.timeit('example_py.test(500000)', setup='import example_py', number=1000)
 
 print(cy, py)

@@ -1,11 +1,13 @@
-import math
+from libc cimport math
 import time
 
-def main(nmax):
+def main(int nmax):
     
-    pi_by_four = 0.0
-    dx = 1.0/nmax
-    
+    cdef:
+        double pi_by_four = 0.0
+        double dx = 1.0/nmax
+        int i
+
     t1 = time.perf_counter()
     
     for i in range(nmax):
